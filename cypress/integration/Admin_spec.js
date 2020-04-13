@@ -26,7 +26,7 @@ describe('Admin Functionality', () => {
             .click();
         cy.get(SNACKBAR_CONTENT).should('have.css','background-color', 'rgb(67, 160, 71)');
     });
-    it.only('should delete retro and warning message should be shown', () => {
+    it('should delete retro and warning message should be shown', () => {
         cy.get(DELETE_RETRO_BUTTON).first().click();
         cy.get(DELETE_WARNING).should('be.visible');
         cy.get(CANCEL_BUTTON).click();
